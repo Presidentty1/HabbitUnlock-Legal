@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +15,64 @@
             color: #333;
             background: #f9f9f9;
         }
-        h1 { color: #1a1a2e; border-bottom: 2px solid #4ecdc4; padding-bottom: 10px; }
-        h2 { color: #1a1a2e; margin-top: 30px; }
-        .effective-date { color: #666; font-style: italic; }
-        .contact { background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 30px; }
+
+        h1 {
+            color: #1a1a2e;
+            border-bottom: 2px solid #4ecdc4;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a1a2e;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2d3436;
+            margin-top: 20px;
+        }
+
+        .effective-date {
+            color: #666;
+            font-style: italic;
+        }
+
+        .contact {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f0f0f0;
+            font-weight: 600;
+        }
     </style>
 </head>
+
 <body>
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Effective Date: January 25, 2026</p>
-    
-    <p>HabitUnlock ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+    <p class="effective-date">Effective Date: February 11, 2026</p>
+
+    <p>HabitUnlock ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we
+        collect, use, and safeguard your information when you use our mobile application.</p>
 
     <h2>Information We Collect</h2>
-    
+
     <h3>Health Data (with your permission)</h3>
     <p>With your explicit consent, we read the following data from Apple HealthKit:</p>
     <ul>
@@ -36,46 +81,113 @@
         <li><strong>Stand Hours</strong> — to track movement habits</li>
         <li><strong>Workout Sessions</strong> — to track completed exercises</li>
     </ul>
-    <p><strong>We do NOT write any data to HealthKit.</strong> We only read data to determine if your habits are complete.</p>
+    <p><strong>We do NOT write any data to HealthKit.</strong> We only read data to determine if your habits are
+        complete. Health data is processed locally on your device and is never sent to our servers or any third-party
+        service.</p>
 
-    <h3>Local Data (stored on your device only)</h3>
+    <h3>Local Data (stored on your device)</h3>
     <ul>
         <li>Your custom habits and goals</li>
         <li>Streak history and achievements</li>
         <li>App preferences and settings</li>
-        <li>Anonymous analytics events (never uploaded to any server)</li>
     </ul>
 
-    <h2>Data Storage</h2>
-    <p><strong>All your data stays on your device.</strong> HabitUnlock is designed as an offline-first app. We do not have servers that store your personal information.</p>
-    
-    <h2>Data Sharing</h2>
-    <p>We do NOT share, sell, or transmit your personal data to any third parties. Your health data, habits, and usage patterns remain entirely on your device.</p>
+    <h3>Analytics Data</h3>
+    <p>We collect anonymous usage analytics to understand how the app is used and to improve the experience. This
+        includes:</p>
+    <ul>
+        <li>Feature usage patterns (e.g., which screens are visited, which habits are most popular)</li>
+        <li>App performance data (crashes, load times)</li>
+        <li>Device type, operating system version, and app version</li>
+        <li>Anonymous session identifiers</li>
+    </ul>
+    <p>Analytics data is <strong>not linked to your identity</strong> and is <strong>not used for tracking</strong>
+        across other apps or websites.</p>
 
-    <h2>Screen Time & App Blocking</h2>
-    <p>HabitUnlock uses Apple's Screen Time API (Family Controls) to block apps until habits are complete. This data is processed locally by Apple's framework and is never accessible to us.</p>
+    <h3>Subscription &amp; Purchase Data</h3>
+    <p>When you subscribe or make a purchase, we process:</p>
+    <ul>
+        <li>Subscription status (active, expired, trial)</li>
+        <li>Purchase timestamps and plan type</li>
+        <li>An anonymous customer identifier</li>
+    </ul>
+    <p>We do <strong>not</strong> have access to your payment details (credit card, Apple ID, etc.). All payment
+        processing is handled by Apple through the App Store.</p>
 
-    <h2>Analytics</h2>
-    <p>We collect anonymous usage analytics (such as which features are used) stored locally on your device. These analytics are never uploaded to any external service. You can disable analytics in the app settings.</p>
+    <h2>Screen Time &amp; App Blocking</h2>
+    <p>HabitUnlock uses Apple's Screen Time API (Family Controls) to block apps until habits are complete. This data is
+        processed locally by Apple's framework and is never accessible to us or any third party.</p>
 
     <h2>Third-Party Services</h2>
-    <p>HabitUnlock uses the following Apple services:</p>
+    <p>HabitUnlock uses the following third-party services:</p>
+
+    <table>
+        <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Data Shared</th>
+        </tr>
+        <tr>
+            <td><strong>PostHog</strong></td>
+            <td>Anonymous product analytics</td>
+            <td>Usage events, device type, OS version, app version, anonymous session IDs</td>
+        </tr>
+        <tr>
+            <td><strong>RevenueCat</strong></td>
+            <td>Subscription management &amp; purchase validation</td>
+            <td>Anonymous customer ID, subscription status, purchase history</td>
+        </tr>
+        <tr>
+            <td><strong>Apple HealthKit</strong></td>
+            <td>Read health data (with your permission)</td>
+            <td>Data stays on-device; not sent to any server</td>
+        </tr>
+        <tr>
+            <td><strong>Apple Screen Time API</strong></td>
+            <td>App blocking</td>
+            <td>Processed locally by Apple's framework</td>
+        </tr>
+        <tr>
+            <td><strong>Apple App Store / StoreKit</strong></td>
+            <td>Process subscriptions and payments</td>
+            <td>Handled entirely by Apple</td>
+        </tr>
+    </table>
+
+    <p>We do <strong>not</strong> sell, rent, or trade your personal data to any third party. Data shared with PostHog
+        and RevenueCat is anonymous and used solely for analytics and subscription management.</p>
+
+    <h2>Data Retention</h2>
     <ul>
-        <li><strong>Apple HealthKit</strong> — to read health data (with your permission)</li>
-        <li><strong>Apple Screen Time API</strong> — to block apps (processed locally)</li>
-        <li><strong>App Store / StoreKit</strong> — to process subscriptions (handled by Apple)</li>
+        <li><strong>On-device data</strong> (habits, streaks, settings) — retained until you delete the app or clear app
+            data</li>
+        <li><strong>Analytics data</strong> (PostHog) — retained for up to 12 months, then automatically deleted</li>
+        <li><strong>Subscription data</strong> (RevenueCat) — retained as long as your subscription is active, plus any
+            period required for billing reconciliation</li>
+    </ul>
+
+    <h2>Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request deletion of your data</li>
+        <li>Opt out of analytics collection (contact us via email)</li>
+        <li>Revoke HealthKit permissions at any time in iOS Settings</li>
     </ul>
 
     <h2>Children's Privacy</h2>
-    <p>HabitUnlock is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+    <p>HabitUnlock is not directed at children under 13. We do not knowingly collect personal information from children.
+    </p>
 
     <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date."</p>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy
+        Policy on this page and updating the "Effective Date."</p>
 
     <div class="contact">
         <h2>Contact Us</h2>
         <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:support@habitunlock.app">support@habitunlock.app</a></p>
+        <p><strong>Email:</strong> <a href="mailto:privacy@habbitunlock.com">privacy@habbitunlock.com</a></p>
     </div>
 </body>
+
 </html>
